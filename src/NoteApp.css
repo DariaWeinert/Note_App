@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap');
+
+
+body {
+  background-image: url('https://bogatyr.club/uploads/posts/2023-01/1675015595_bogatyr-club-p-fon-dlya-saita-html-fon-instagram-1.jpg');
+  width: 100vw;
+  height: 100vh;
+  background-repeat: repeat;
+  background-size:cover;
+  
+}
+
+.heading {
+  color:black;
+  display: block;
+  text-align: center;
+  font-family: 'Architects Daughter';
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+  font-size: 4em;
+  background-color: #3b6f60;
+  margin: 0;
+  opacity: 0.8;
+}
+
+.form-container {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #3b6f60;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0.2, 0.5);
+  padding-bottom: 30px;
+
+}
+
+.text-input {
+  width: 63vw;
+  min-width: 400px;
+  min-height: 100px;
+  padding: 20px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0.2, 0.5);
+  font-family: 'Space Mono';
+  background-color: #424056;
+}
+
+.add-note-button {
+  width: 100%;
+  background-color: #424056;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0.2, 0.5);
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-family: 'Architects Daughter';
+  font-size: 1.5em;
+}
+
+.notes-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.note {
+  box-shadow: 2px 2px 5px rgba(0, 0, 0.2, 0.5);
+  color: black;
+  background-color: #FFFF00;
+  padding: 10px;
+  margin: 10px;
+  font-family: 'Space Mono', monospace;
+  font-size: 1rem;
+  max-width: 300px;
+  word-wrap: break-word;
+}
+.note-date {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.8rem;
+  font-weight: bold ;
+}
+
+
+
+
