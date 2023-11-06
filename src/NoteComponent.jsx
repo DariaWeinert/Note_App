@@ -10,6 +10,7 @@ const NoteComponent = ({ note, handleDelete }) => {
   return (
     <div className='note'>
         <button className="delete-button" onClick={handleNoteDelete}>X</button>
+    <p className="note-title">{note.title}</p>
       <p className='note-text'>{note.text}</p>
       <p className='note-date'>{note.createdDate}</p>
       

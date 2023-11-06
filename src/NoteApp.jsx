@@ -6,9 +6,10 @@ import './NoteApp.css'
 const App = () => {
   const [notes, setNotes] = useState([]);
 
-  const handleAddNote = (text) => {
+  const handleAddNote = (note) => {
     const newNote = {
-      text: text,
+      title: note.title,
+      text: note.text,
       createdDate: new Date().toLocaleString('en-GB', {dateStyle: 'short', timeStyle: 'short' }),
     };
     setNotes([newNote, ...notes]);

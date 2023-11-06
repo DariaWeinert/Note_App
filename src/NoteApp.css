@@ -33,12 +33,21 @@ body {
   padding-bottom: 30px;
 
 }
+.title-input{
+  width: 100%;
+  padding: 5px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0.2, 0.5);
+  font-family: 'Space Mono';
+  background-color: #424056;
+}
 
 .text-input {
-  width: 63vw;
+  width: 100%;
   min-width: 400px;
   min-height: 100px;
-  padding: 20px;
+  padding: 5px;
   margin-bottom: 10px;
   border-radius: 5px;
   box-shadow: 2px 2px 5px rgba(0, 0, 0.2, 0.5);
@@ -47,7 +56,8 @@ body {
 }
 
 .add-note-button {
-  width: 100%;
+  width: 102%;
+  padding: 5px;
   background-color: #424056;
   box-shadow: 2px 2px 5px rgba(0, 0, 0.2, 0.5);
   color: white;
@@ -64,22 +74,35 @@ body {
   margin-top: 20px;
 }
 
+.note-title {
+  font-family: 'Arial Black';
+  margin: 0;
+  padding: 0;
+}
 .note {
   position: relative;
   box-shadow: 2px 2px 5px rgba(0, 0, 0.2, 0.5);
   color: black;
   background-color: #FFFF00;
   padding: 10px;
+
+  max-width: 300px;
+
   margin: 10px;
+}
+.note-text {
   font-family: 'Space Mono', monospace;
   font-size: 1rem;
-  max-width: 300px;
   word-wrap: break-word;
+  padding: 0;
+  margin-top: 10px;
 }
 .note-date {
   font-family: 'Space Mono', monospace;
   font-size: 0.8rem;
   font-weight: bold ;
+  margin: 0;
+  
 }
 .delete-button {
   position: absolute;
