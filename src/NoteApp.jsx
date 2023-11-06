@@ -11,10 +11,12 @@ const App = () => {
       text: text,
       createdDate: new Date().toLocaleString('en-GB', {dateStyle: 'short', timeStyle: 'short' }),
     };
-    setNotes([...notes, newNote]);
+    setNotes([newNote, ...notes]);
     console.log (newNote);
   };
-
+  const handleDelete = (noteToDelete) => {
+    setNotes(notes.filter((note) => note !== noteToDelete));
+  };
   return (
     <>
     <body>
@@ -25,7 +27,7 @@ const App = () => {
       </div>
       <div className="notes-container">
         {notes.map((note, index) => (
-          <NoteComponent key={index} note={note} />
+          <NoteComponent key={index} note={note} handleDelete={handleDelete} />
         ))}
       </div>
     </div>

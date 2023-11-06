@@ -65,6 +65,7 @@ body {
 }
 
 .note {
+  position: relative;
   box-shadow: 2px 2px 5px rgba(0, 0, 0.2, 0.5);
   color: black;
   background-color: #FFFF00;
@@ -80,7 +81,24 @@ body {
   font-size: 0.8rem;
   font-weight: bold ;
 }
-
+.delete-button {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+  padding: 0;
+  background-color: #d85439;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  border-radius: 50%;
+  border: #424056 1px solid;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(55, 52, 52);
+  cursor: pointer;
+}
 
 
 
