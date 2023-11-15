@@ -27,7 +27,7 @@ const FormComponent = ({ handleAddNote }) => {
         placeholder='Type your title'
         value={noteTitle}
         onChange={handleTitleChange}></input>
-      <input className='text-input'
+      <textarea className='text-input'
         placeholder='Type your note'
         value={noteText}
         onChange={handleInputChange}
