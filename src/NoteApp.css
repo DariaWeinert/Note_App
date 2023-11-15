@@ -122,6 +122,14 @@ body {
   color: rgb(55, 52, 52);
   cursor: pointer;
 }
+.modal-active {
+  pointer-events: none;
+  user-select: none;
+}
 
+.inactive {
+  pointer-events: none;
+
+}
 
 
