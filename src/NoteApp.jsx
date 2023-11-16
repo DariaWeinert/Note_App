@@ -1,4 +1,3 @@
-// В App.jsx
 import React, { useState } from 'react';
 import FormComponent from './FormComponent';
 import NoteComponent from './NoteComponent';
@@ -21,11 +20,16 @@ const App = () => {
   };
 
   const handleEditNote = (originalNote, updatedNote) => {
-    // Logic to edit the note
     const updatedNotes = notes.map((note) =>
       note === originalNote ? { ...note, ...updatedNote } : note
     );
     setNotes(updatedNotes);
+  };
+
+  const handleSaveNote = (editedNote) => {
+    // Add an updated date to the editedNote
+    editedNote.updatedDate = new Date().toLocaleString('en-GB', { dateStyle: 'short', timeStyle: 'short' });
+    handleEditNote(note, editedNote);
   };
 
   return (

@@ -12,9 +12,12 @@ const Modal = ({ active, setActive, note, handleSaveNote }) => {
   }, [active]);
 
   const handleSave = () => {
+    const currentDate = new Date().toLocaleString('en-GB', { dateStyle: 'short', timeStyle: 'short' });
+  
     handleSaveNote({
       title: editedTitle,
       text: editedText,
+      updatedDate: currentDate,
     });
     setIsEditing(false);
   };
