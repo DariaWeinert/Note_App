@@ -26,12 +26,6 @@ const App = () => {
     setNotes(updatedNotes);
   };
 
-  const handleSaveNote = (editedNote) => {
-    // Add an updated date to the editedNote
-    editedNote.updatedDate = new Date().toLocaleString('en-GB', { dateStyle: 'short', timeStyle: 'short' });
-    handleEditNote(note, editedNote);
-  };
-
   return (
     <>
       <body>
@@ -57,4 +51,4 @@ const App = () => {
 };
 
 export default App;
-``
+

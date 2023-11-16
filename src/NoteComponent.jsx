@@ -10,12 +10,6 @@ const NoteComponent = ({ note, handleDelete, handleEditNote }) => {
     }
   };
 
-  const handleNoteClick = (e) => {
-    if (!e.target.classList.contains("delete-button")) {
-      setModalActive(true);
-    }
-  };
-
   const handleSaveNote = (editedNote) => {
     handleEditNote(note, editedNote);
     setModalActive(false);
