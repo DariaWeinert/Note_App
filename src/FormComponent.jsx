@@ -1,9 +1,9 @@
 import { useState } from 'react';
 
 const FormComponent = ({ handleAddNote }) => {
-    const [noteTitle, setNoteTitle] = useState('');
+  const [noteTitle, setNoteTitle] = useState('');
   const [noteText, setNoteText] = useState('');
-
+  
   const handleTitleChange = (event) => {
     setNoteTitle(event.target.value);
   }
@@ -16,6 +16,7 @@ const FormComponent = ({ handleAddNote }) => {
         title:noteTitle,
         text:noteText,
     })
+    
     setNoteTitle('');
     setNoteText('');
   }

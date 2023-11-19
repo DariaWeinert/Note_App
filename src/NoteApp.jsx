@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 import FormComponent from './FormComponent';
 import NoteComponent from './NoteComponent';
+import useLocalStorage from './LocalStorage';
 import './NoteApp.css';
 
 const App = () => {
-  const [notes, setNotes] = useState([]);
+  const [notes, setNotes] = useLocalStorage('notes', []);
 
   const handleAddNote = (note) => {
     const newNote = {
@@ -13,6 +14,7 @@ const App = () => {
       createdDate: new Date().toLocaleString('en-GB', { dateStyle: 'short', timeStyle: 'short' }),
     };
     setNotes([newNote, ...notes]);
+    console.log ([newNote, ...notes]);
   };
 
   const handleDelete = (noteToDelete) => {
@@ -24,6 +26,7 @@ const App = () => {
       note === originalNote ? { ...note, ...updatedNote } : note
     );
     setNotes(updatedNotes);
+    console.log([updatedNotes])
   };
 
   return (
