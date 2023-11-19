@@ -9,6 +9,7 @@
     align-items: center;
     justify-content: center;
     transform: scale(0);
+    z-index: 10;
 }
 
 .modal.active {
@@ -20,8 +21,13 @@ transform: scale(1);
   background-color: #FFFF00;
   box-shadow: 2px 2px 5px rgba(0, 0, 0.2, 0.5);
   color: black;
+  min-width: 300px;
   display:flex;
   flex-direction: column;
+}
+
+.modal-content .note-text {
+  height: 100px;
 }
 
 .btn-box {
