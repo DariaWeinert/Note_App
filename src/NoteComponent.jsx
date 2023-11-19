@@ -4,7 +4,8 @@ import Modal from "./NoteModal.jsx";
 const NoteComponent = ({ note, handleDelete, handleEditNote }) => {
   const [modalActive, setModalActive] = useState(false);
 
-  const handleNoteDelete = () => {
+  const handleNoteDelete = (event) => {
+    event.stopPropagation();
     if (window.confirm("Are you sure you want to delete this sticker?")) {
       handleDelete(note);
     }
@@ -29,7 +30,7 @@ const NoteComponent = ({ note, handleDelete, handleEditNote }) => {
           X
         </button>
         <p className="note-title">{note.title}</p>
-        <p className="note-text">{note.text}</p>
+        <p className="note-text" style={{ whiteSpace: 'pre-line' }}>{note.text}</p>
         <p className="note-date">Created: {note.createdDate}</p>
         {note.updatedDate && <p className="note-date">Updated: {note.updatedDate}</p>}
       </div>
