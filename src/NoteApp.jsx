@@ -14,7 +14,6 @@ const App = () => {
       createdDate: new Date().toLocaleString('en-GB', { dateStyle: 'short', timeStyle: 'short' }),
     };
     setNotes([newNote, ...notes]);
-    console.log ([newNote, ...notes]);
   };
 
   const handleDelete = (noteToDelete) => {
@@ -26,7 +25,6 @@ const App = () => {
       note === originalNote ? { ...note, ...updatedNote } : note
     );
     setNotes(updatedNotes);
-    console.log([updatedNotes])
   };
 
   return (
